@@ -29,7 +29,7 @@ const routes: Routes = [
     component: AboutusComponent,
   },
   {
-    path: 'service',
+    path: 'services',
     component: ServicesComponent,
   },
 ];
