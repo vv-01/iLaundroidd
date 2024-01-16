@@ -5,6 +5,7 @@ import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ServicesComponent } from './services/services.component';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'services',
     component: ServicesComponent,
+  },
+  {
+    path: 'header',
+    component: HeaderComponent,
   },
 ];
 
