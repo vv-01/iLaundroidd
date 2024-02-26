@@ -6,25 +6,25 @@ import { ContactComponent } from './contact/contact.component';
 import { HeroComponent } from './hero/hero.component';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'home',
+  //   pathMatch: 'full',
+  // },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-  },
-  {
-    path: 'home/aboutus',
+    path: 'aboutus',
     component: AboutusComponent,
   },
   {
-    path: 'home/services',
+    path: 'services',
     component: ServicesComponent,
   },
   {
-    path: 'home/contact',
+    path: 'contact',
     component: ContactComponent,
   },
   {
-    path: 'home',
+    path: '',
     component: HeroComponent,
   },
 ];
