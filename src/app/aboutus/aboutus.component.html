@@ -1,77 +1,76 @@
-<!-- component -->
-<div
-  class="dark:dark:bg-gray-800 dark:dark:text-gray-100 relative flex min-h-screen flex-col justify-center overflow-hidden bg-stone-950 py-6 sm:py-12"
->
-  <div class="w-full items-center mx-auto max-w-screen-lg">
-    <div class="group grid w-full grid-cols-2">
-      <div
-        class="pl-16 relative flex items-end flex-col before:block before:absolute before:h-1/6 before:w-4 before:bg-sky-300 before:bottom-0 before:left-0 before:rounded-lg before:transition-all group-hover:before:bg-sky-600 overflow-hidden"
-      >
-        <div
-          class="absolute top-0 left-0 bg-sky-300 w-4/6 px-12 py-14 flex flex-col justify-center rounded-xl group-hover:bg-sky-600 transition-all"
-        >
-          <span class="block mb-10 font-bold group-hover:text-amber-100"
-            >HERE WE ARE</span
-          >
-          <h2 class="text-slate-950 font-bold text-3xl group-hover:text-black">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-            voluptas
-          </h2>
+<div class="sm:flex items-center  text-gray-100 bg-slate-900 w-full">
+    <div class="sm:w-1/2 p-24">
+        <div class="image object-center text-center">
+            <img src="https://i.imgur.com/WbQnbas.png">
         </div>
-        <a class="font-bold text-sm flex mt-2 mb-8 items-center gap-2" href="">
-          <span class="text-sky-300">MORE ABOUT US</span>
+    </div>
+    <div class="sm:w-1/2 p-5">
+        <div class="text">
+            <span class="text-gray-500 border-b-2 border-indigo-500 uppercase">
+              About us
+            </span>
+            <h2 class="my-4 font-bold text-3xl  sm:text-4xl ">
+              About <span class="text-indigo-500">
+                Our Company
+              </span>
+            </h2>
+            <p class="text-gray-300">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi
+                doloremque, fugiat illum magni minus nisi nulla numquam obcaecati placeat quia, repellat tempore
+                voluptatum.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="flex justify-center bg-slate-900 pb-10">
+        <br />
+        <br />
+        <button
+          (click)="gotoPage('')"
+          class="border border-indigo-500 text-indigo-500 block rounded-sm font-bold py-4 px-6 mr-2 flex items-center hover:bg-indigo-500 hover:text-white"
+        >
           <svg
+            class="h-5 w-5 mr-2 fill-current"
+            version="1.1"
+            id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6 text-sky-300"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="-49 141 512 512"
+            style="enable-background: new -49 141 512 512"
+            xml:space="preserve"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+              id="XMLID_10_"
+              d="M438,372H36.355l72.822-72.822c9.763-9.763,9.763-25.592,0-35.355c-9.763-9.764-25.593-9.762-35.355,0 l-115.5,115.5C-46.366,384.01-49,390.369-49,397s2.634,12.989,7.322,17.678l115.5,115.5c9.763,9.762,25.593,9.763,35.355,0 c9.763-9.763,9.763-25.592,0-35.355L36.355,422H438c13.808,0,25-11.193,25-25S451.808,372,438,372z"
+            ></path>
+          </svg>
+          Home
+        </button>
+        <button
+          (click)="gotoPage('contact')"
+          class="border border-indigo-500 bg-indigo-500 text-white block rounded-sm font-bold py-4 px-6 ml-2 flex items-center hover:border-indigo-500 hover:text-indigo-500 hover:bg-slate-900"
+        >
+          Contact
+          <svg
+            class="h-5 w-5 ml-2 fill-current"
+            clasversion="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="-49 141 512 512"
+            style="enable-background: new -49 141 512 512"
+            xml:space="preserve"
+          >
+            <path
+              id="XMLID_11_"
+              d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
+            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
+            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"
             />
           </svg>
-        </a>
-        <div class="rounded-xl overflow-hidden">
-          <img
-            src="https://th.bing.com/th/id/OIP.b1QQK7W86ZeBRDT6JwpDBQHaFq?rs=1&pid=ImgDetMain"
-            alt=""
-          />
-        </div>
+        </button>
       </div>
-      <div>
-        <div class="pl-12">
-          <p class="peer mb-6 text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tenetur
-            odit eaque aliquid quis non facere dicta ab esse, inventore
-            blanditiis quidem soluta officiis cumque quo est repellendus? Ex,
-            nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-            tenetur odit eaque aliquid quis non facere dicta ab esse, inventore
-            blanditiis quidem soluta officiis cumque quo est repellendus? Ex,
-            nobis!
-          </p>
-          <p class="mb-6 text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tenetur
-            odit eaque aliquid quis non facere dicta ab esse, inventore
-            blanditiis quidem soluta officiis cumque quo est repellendus? Ex,
-            nobis!
-          </p>
-          <h3 class="mb-4 font-semibold text-xl text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </h3>
-          <ul
-            role="list"
-            class="marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-500"
-          >
-            <li>Lorem ipsum dolor sit amet</li>
-            <li>Lorem ipsum dolor sit amet</li>
-            <li>Lorem ipsum dolor sit amet</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
