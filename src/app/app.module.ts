@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeroComponent } from './hero/hero.component';
+import { InstructionsComponent } from './instructions/instructions.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HeroComponent } from './hero/hero.component';
     HeaderComponent,
     FooterComponent,
     ContactComponent,
-    HeroComponent
+    HeroComponent,
+    InstructionsComponent
   ],
   imports: [
     BrowserModule,
