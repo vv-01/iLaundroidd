@@ -11,7 +11,7 @@ export class FooterComponent {
 
   gotoPage(pagename: string): void {
     if (pagename === 'twitter') {
-      window.open('https://twitter.com', '_blank');
+      window.open('https://twitter.com/ILaundroid', '_blank');
     } else if (pagename === 'facebook') {
       window.open('https://www.facebook.com/iIlaundroid/', '_blank');
     } else if (pagename === 'instagram') {
