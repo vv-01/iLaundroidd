@@ -116,6 +116,10 @@ body {
   display: block;
 }
 
+.indexx {
+  z-index: 999;
+}
+
 @media screen and (max-width: 320px) {
   header:has(#toggle:checked) #navigation {
     height: var(--menu-height, 10rem);
