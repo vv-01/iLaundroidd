@@ -1,8 +1,9 @@
-<header
-  class="p-4 fixed top-0 w-full backdrop-filter backdrop-blur-lg bg-opacity-30 text-gray-100 h-24 indexx"
+<nav
+  [ngClass]="{ '-translate-y-full': isHidden, 'translate-y-0': !isHidden }"
+  class="p-4 fixed top-0 w-full backdrop-filter backdrop-blur-lg bg-opacity-30 text-gray-100 h-24 indexx text-lg"
 >
   <div
-    class="container flex justify-between h-16 mx-auto md:justify-center md:space-x-8"
+    class="flex justify-between md:justify-center items-center w-full px-2 md:px-0"
   >
     <ul class="items-stretch hidden space-x-3 md:flex">
       <li class="flex">
@@ -61,21 +62,37 @@
         </a>
       </li>
     </ul>
-    <button title="Button" type="button" class="p-4 md:hidden">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        class="w-6 h-6 dark:dark:text-gray-100"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"
-        ></path>
-      </svg>
-    </button>
+
+    <div
+      class="text-xs md:backdrop-blur-xl md:hidden flex flex-col px-2 py-2 mx-2 border-solid border border-zinc-400 rounded-md cursor-pointer"
+      (click)="toggleMobileMenu()"
+    >
+      <fa-icon
+        *ngIf="!isOpen"
+        [icon]="faBars"
+        size="lg"
+        class="text-white"
+      ></fa-icon>
+      <fa-icon
+        *ngIf="isOpen"
+        [icon]="faTimes"
+        size="lg"
+        class="text-white"
+      ></fa-icon>
+    </div>
   </div>
-</header>
+  <div
+    class="navbar-links-container flex flex-col mt-16 md:hidden absolute top-4 left-0 z-50 w-full items-center py-10 border-y border-solid bg-black"
+    *ngIf="isOpen"
+  >
+    <a
+      *ngFor="let link of navbarLinks"
+      [href]="link.href"
+      title="{{ link.label }}"
+      class="navbar-link flex items-center"
+      (click)="toggleMobileMenu()"
+    >
+      {{ link.label }}
+    </a>
+  </div>
+</nav>

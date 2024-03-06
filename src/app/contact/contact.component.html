@@ -66,41 +66,52 @@
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.952036137888!2d74.89610237494387!3d12.910804316208594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba359dfac132663%3A0xa7bf228838232d32!2sSt%20Joseph%20Engineering%20College!5e0!3m2!1sen!2sin!4v1709152837376!5m2!1sen!2sin"
       ></iframe>
     </div>
-    <form novalidate="" class="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+    <form
+      #userPost="ngForm"
+      (ngSubmit)="submitData(userPost.value)"
+      class="flex flex-col py-32 py-6 space-y-6 md:py-0 md:px-6"
+    >
       <label class="block">
         <span class="mb-1">Full name</span>
         <input
+          name="name"
           type="text"
           placeholder="Jenkins Jenkins"
           class="block w-full h-12 rounded-md shadow-sm focus:ring focus:ri focus:ri dark:dark:bg-gray-800"
+          ngModel
         />
       </label>
       <label class="block">
         <span class="mb-1">Email address</span>
         <input
+          name="email"
           type="email"
           placeholder="jenkins@jenkins.com"
           class="block w-full h-12 rounded-md shadow-sm focus:ring focus:ri focus:ri dark:dark:bg-gray-800"
+          ngModel
         />
       </label>
       <label class="block">
         <span class="mb-1">Phone Number</span>
         <input
+          name="phone"
           type="number"
           placeholder="9876543210"
           class="block w-full h-12 rounded-md shadow-sm focus:ring focus:ri focus:ri dark:dark:bg-gray-800"
+          ngModel
         />
       </label>
       <label class="block">
         <span class="mb-1">Message</span>
         <textarea
+          name="message"
           rows="6"
           class="block w-full rounded-md focus:ring focus:ri focus:ri dark:dark:bg-gray-800"
+          ngModel
         >
         </textarea>
       </label>
       <button
-        (click)="gotoPage('contact')"
         class="border border-indigo-500 bg-indigo-500 justify-center text-white block rounded-sm font-bold py-4 px-6 ml-2 flex items-center hover:border-indigo-500 hover:text-indigo-500 hover:bg-slate-900 w-auto"
       >
         Submit

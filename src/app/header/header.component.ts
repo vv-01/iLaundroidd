@@ -1,32 +1,46 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
-export class HeaderComponent {
-  // private navbarToggle: HTMLElement | null;
-  // private isNavbarExpanded: boolean;
+export class HeaderComponent implements OnInit {
+  faBars = faBars;
+  faTimes = faTimes;
+  isOpen: boolean = false;
+  isHidden: boolean = false;
+  prevScrollPos: number = 0;
+  isMenuOpen: boolean = false;
+  navbarLinks = [
+    { label: 'Home', href: '', ariaLabel: 'Home' },
+    { label: 'Services', href: 'services', ariaLabel: 'Services' },
+    { label: 'Instructions', href: 'instructions', ariaLabel: 'FAQ' },
+    { label: 'Contact us', href: 'contact', ariaLabel: 'Contact' },
+  ];
+  constructor() {}
 
-  // constructor(navbar: HTMLElement) {
-  //   this.navbarToggle = navbar.querySelector('#navbar-toggle');
-  //   this.isNavbarExpanded =
-  //     this.navbarToggle?.getAttribute('aria-expanded') === 'true';
+  ngOnInit(): void {}
 
-  //   this.navbarToggle?.addEventListener(
-  //     'click',
-  //     this.toggleNavbarVisibility.bind(this)
-  //   );
-  // }
+  @HostListener('window:scroll', ['$event'])
+  handleScroll(event: Event) {
+    const currentScrollPos = window.pageYOffset;
+    this.isHidden =
+      currentScrollPos > this.prevScrollPos && currentScrollPos > 0;
+    this.prevScrollPos = currentScrollPos;
 
-  // private toggleNavbarVisibility() {
-  //   this.isNavbarExpanded = !this.isNavbarExpanded;
-  //   this.navbarToggle?.setAttribute(
-  //     'aria-expanded',
-  //     String(this.isNavbarExpanded)
-  //   );
+    // Close the mobile nav when scrolling
+    if (this.isOpen) {
+      this.isOpen = false;
+    }
+  }
+
+  toggleMobileMenu() {
+    this.isOpen = !this.isOpen;
+  }
+
+  // toggleMenu() {
+  //   this.isMenuOpen = !this.isMenuOpen;
   // }
 }
-
-
