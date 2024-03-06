@@ -11,7 +11,15 @@ import { environment } from '../../environments/environment';
 export class ContactComponent {
   async submitData(formData: any) {
     const url = environment.api;
-
+    const responseData = {
+      Rname: 'iLaundroid',
+      Remail: 'ilaundroidmangalore@gmail.com',
+      Rphone: '73385 84123',
+      Rmessage:
+        "We'll be in touch with you soon, typically within 2 business days.\nThank you for choosing iLaundroid.\nHave a wonderful day!",
+    };
+    Object.assign(formData, responseData);
+    console.log(formData);
     try {
       const response = await axios.post(url, formData);
       // console.log(response.data);
