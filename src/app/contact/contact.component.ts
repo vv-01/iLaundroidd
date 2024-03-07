@@ -10,7 +10,7 @@ import { environment } from '../../environments/environment';
 })
 export class ContactComponent {
   async submitData(formData: any) {
-    const url = environment.api;
+    const url = environment.url;
     const responseData = {
       Rname: 'iLaundroid',
       Remail: 'ilaundroidmangalore@gmail.com',
